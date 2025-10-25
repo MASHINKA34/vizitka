@@ -213,13 +213,9 @@ function App() {
                       <p className="text-gray-400 text-xs sm:text-sm">2+ года опыта</p>
                     </div>
                   </div>
-                  {/* <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
-                    Создаю современные интерфейсы с фокусом на производительность и UX. 
-                    Люблю сложные анимации и интерактивные элементы. Перфекционист в деталях.
-                  </p> */}
                   <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
-                    Снюхиваю каждую дорожку крека под макана, так же поёбываю сомиков на рыбалке,
-                    делаю ахуенную чай хану жи есть.
+                    Создаю современные интерфейсы с фокусом на производительность и UX. 
+                    Могу делать анимации и интерактивные элементы. Перфекционист в деталях.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-lg text-xs sm:text-sm text-purple-300">React</span>
@@ -265,13 +261,9 @@ function App() {
                       <p className="text-gray-400 text-xs sm:text-sm">2+ года опыта</p>
                     </div>
                   </div>
-                  {/* <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
                     Строю надёжные серверные архитектуры. Фанат оптимизации и безопасности.
                     Работаю с высоконагруженными системами и сложной бизнес-логикой.
-                  </p> */}
-                  <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
-                    Нюхаю крек, люблю долбится в жопу, так как пишу на расте, так же у меня есть свой папик.
-                    так же люблю по выходным трахать карпиков
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     <span className="px-3 py-1 bg-violet-500/20 border border-violet-500/30 rounded-lg text-xs sm:text-sm text-violet-300">Rust</span>
