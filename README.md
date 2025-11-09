@@ -218,12 +218,6 @@ theme: {
 }
 ```
 
-## 📝 Лицензия
-
-Этот проект является собственностью VoiDteam. Все права защищены.
-
----
-
 ## 👥 Команда
 
 ### Александр — Frontend Developer
@@ -242,7 +236,6 @@ theme: {
 
 <!-- - 📧 Email: [voidteam@example.com](mailto:voidteam@example.com) -->
 <!-- - 💬 Telegram: [@voidteam](https://t.me/voidteam) -->
----
 
 <div align="center">
 
