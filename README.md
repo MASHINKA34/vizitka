@@ -241,7 +241,7 @@ theme: {
 
 **Создано с 💜 командой VoiDteam**
 
-[![GitHub](https://img.shields.io/badge/GitHub-VoiDteam-181717?style=flat&logo=github)](https://github.com/voidteam)
-[![Telegram](https://img.shields.io/badge/Telegram-@voidteam-26A5E4?style=flat&logo=telegram)](https://t.me/voidteam)
+[![GitHub](https://img.shields.io/badge/GitHub-MASHINKA34-181717?style=flat&logo=github)](https://github.com/MASHINKA34)
+[![Telegram](https://img.shields.io/badge/Telegram-@mashinka34r-26A5E4?style=flat&logo=telegram)](https://t.me/mashinka34r)
 
 </div>
