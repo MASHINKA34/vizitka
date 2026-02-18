@@ -154,7 +154,7 @@ function App() {
               Создаём <span className="text-purple-400 font-semibold">цифровые продукты</span>
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-12 animate-fadeIn max-w-2xl mx-auto px-4" style={{ animationDelay: '0.5s' }}>
-              Full-stack разработка от идеи до запуска. 2 года опыта. Удалённая работа с возможностью офисных встреч.
+              Full-stack и мобильная разработка от идеи до запуска. 2+ года опыта. Удалённая работа с возможностью офисных встреч.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn px-4" style={{ animationDelay: '0.6s' }}>
               <button
@@ -188,7 +188,7 @@ function App() {
               <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Наша команда</span>
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
               {/* Frontend Developer - Александр */}
               <div
                 className={`group relative transition-all duration-700 ${
@@ -284,6 +284,54 @@ function App() {
                   </div>
                 </div>
               </div>
+
+              {/* Mobile Developer - Данил */}
+              <div
+                className={`group relative transition-all duration-700 delay-400 ${
+                  isTeamVisible
+                    ? 'opacity-100 translate-x-0'
+                    : scrollDirection === 'down'
+                      ? 'opacity-0 translate-x-20'
+                      : 'opacity-0 -translate-x-20'
+                }`}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 h-full">
+                  <div className="flex items-start gap-4 sm:gap-6 mb-6">
+                    <img
+                      src="/danil.jpg"
+                      alt="Данил"
+                      className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border-2 border-cyan-500/50 shadow-lg shadow-cyan-500/50 flex-shrink-0"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-1">Данил</h3>
+                      <p className="text-cyan-400 font-medium text-sm sm:text-base mb-2">Mobile Developer</p>
+                      <p className="text-gray-400 text-xs sm:text-sm">1+ год опыта</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
+                    Разрабатываю кроссплатформенные мобильные приложения. Люблю чистую архитектуру и плавный UI.
+                    Умею делать нативные анимации и работать с нативными API телефона.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-xs sm:text-sm text-cyan-300">React Native</span>
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-xs sm:text-sm text-cyan-300">Flutter</span>
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-xs sm:text-sm text-cyan-300">TypeScript</span>
+                    <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-xs sm:text-sm text-cyan-300">Expo</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
+                      <Github size={20} />
+                    </a>
+                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
+                      <Send size={20} />
+                    </a>
+                    <a href="mailto:" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
+                      <Mail size={20} />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className={`text-center transition-all duration-700 delay-400 ${isTeamVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
@@ -291,6 +339,11 @@ function App() {
                 <div className="text-center">
                   <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent mb-2">Full-Stack</div>
                   <div className="text-gray-400 text-sm sm:text-base">Решения под ключ</div>
+                </div>
+                <div className="w-12 h-px sm:w-px sm:h-12 bg-gradient-to-r sm:bg-gradient-to-b from-transparent via-purple-500/50 to-transparent" />
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">Mobile</div>
+                  <div className="text-gray-400 text-sm sm:text-base">iOS & Android</div>
                 </div>
                 <div className="w-12 h-px sm:w-px sm:h-12 bg-gradient-to-r sm:bg-gradient-to-b from-transparent via-purple-500/50 to-transparent" />
                 <div className="text-center">
@@ -384,7 +437,7 @@ function App() {
                 </div>
               </div>
 
-              {/* Project 4 - Portfolio */}
+              {/* Project 4 - API */}
               <div className={`group relative transition-all duration-700 delay-450 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-violet-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
                 <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 h-full">
@@ -394,7 +447,7 @@ function App() {
                   </div>
                   <p className="text-gray-400 mb-4 text-sm">Backend проект</p>
                   <p className="text-gray-300 leading-relaxed mb-6">
-                    RESTful API с аутентификацией, WebSocket'ами для real-time уведомлений, 
+                    RESTful API с аутентификацией, WebSocket'ами для real-time уведомлений,
                     кэшированием и оптимизацией запросов. Обслуживает 1000+ активных пользователей.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -405,6 +458,56 @@ function App() {
                   </div>
                   <div className="flex items-center gap-4 text-sm text-gray-400">
                     <span className="flex items-center gap-1"><Clock size={16} /> 3 недели</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 5 - Fitness App (Данил) */}
+              <div className={`group relative transition-all duration-700 delay-600 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 h-full">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Фитнес-трекер</h3>
+                    <ExternalLink size={20} className="text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <p className="text-gray-400 mb-4 text-sm">Mobile проект</p>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    Кроссплатформенное приложение для отслеживания тренировок и питания.
+                    Графики прогресса, уведомления, интеграция с Apple Health и Google Fit. 4.8★ в сторах.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-2 py-1 bg-cyan-500/20 rounded text-xs text-cyan-300">React Native</span>
+                    <span className="px-2 py-1 bg-cyan-500/20 rounded text-xs text-cyan-300">Expo</span>
+                    <span className="px-2 py-1 bg-cyan-500/20 rounded text-xs text-cyan-300">TypeScript</span>
+                    <span className="px-2 py-1 bg-cyan-500/20 rounded text-xs text-cyan-300">Zustand</span>
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1"><Clock size={16} /> 4 недели</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 6 - Delivery App (Данил) */}
+              <div className={`group relative transition-all duration-700 delay-700 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/30 hover:border-blue-400 transition-all duration-300 h-full">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Приложение доставки еды</h3>
+                    <ExternalLink size={20} className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <p className="text-gray-400 mb-4 text-sm">Mobile проект</p>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    Полноценное приложение для заказа еды с картой, real-time отслеживанием курьера,
+                    push-уведомлениями и системой отзывов. 2000+ активных пользователей.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-2 py-1 bg-blue-500/20 rounded text-xs text-blue-300">Flutter</span>
+                    <span className="px-2 py-1 bg-blue-500/20 rounded text-xs text-blue-300">Dart</span>
+                    <span className="px-2 py-1 bg-blue-500/20 rounded text-xs text-blue-300">Firebase</span>
+                    <span className="px-2 py-1 bg-blue-500/20 rounded text-xs text-blue-300">Google Maps</span>
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1"><Clock size={16} /> 5 недель</span>
                   </div>
                 </div>
               </div>
@@ -511,7 +614,7 @@ function App() {
               <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Технологии</span>
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-4 gap-8">
               {/* Frontend */}
               <div className={`transition-all duration-700 ${isTechVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-purple-500/30 h-full">
@@ -622,6 +725,43 @@ function App() {
                   </div>
                 </div>
               </div>
+
+              {/* Mobile */}
+              <div className={`transition-all duration-700 delay-450 ${isTechVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+                <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-cyan-500/30 h-full">
+                  <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Mobile</h3>
+                  <div className="space-y-3 text-gray-300">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>React Native</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>Flutter / Dart</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>Expo</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>Firebase</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>Push Notifications</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>App Store / Google Play</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>Zustand / Redux</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -634,7 +774,7 @@ function App() {
             </h2>
             <p className="text-center text-gray-400 mb-16 text-lg">Готовы обсудить ваш проект. Ответим в течение 24 часов.</p>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
               {/* Александр Contact Card */}
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
@@ -694,6 +834,38 @@ function App() {
                     <a href="mailto:alpha9a@mail.ru" className="flex items-center gap-3 p-3 bg-violet-500/10 rounded-lg hover:bg-violet-500/20 transition-all group">
                       <Mail size={20} className="text-violet-400" />
                       <span className="text-gray-300 text-sm group-hover:text-white transition-colors">alpha9a@mail.ru</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Данил Contact Card */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="flex items-center gap-4 mb-6">
+                    <img
+                      src="/danil.jpg"
+                      alt="Данил"
+                      className="w-16 h-16 rounded-xl object-cover border-2 border-cyan-500/50 shadow-lg shadow-cyan-500/50 flex-shrink-0"
+                    />
+                    <div>
+                      <h3 className="text-xl font-bold">Данил</h3>
+                      <p className="text-cyan-400 text-sm">Mobile Developer</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
+                      <Github size={20} className="text-cyan-400" />
+                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">GitHub</span>
+                    </a>
+                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
+                      <Send size={20} className="text-cyan-400" />
+                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">Telegram</span>
+                    </a>
+                    <a href="mailto:" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
+                      <Mail size={20} className="text-cyan-400" />
+                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">Email</span>
                     </a>
                   </div>
                 </div>
