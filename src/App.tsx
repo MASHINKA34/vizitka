@@ -855,15 +855,15 @@ function App() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
+                    <a href="https://github.com/ZTDan1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
                       <Github size={20} className="text-cyan-400" />
                       <span className="text-gray-300 text-sm group-hover:text-white transition-colors">GitHub</span>
                     </a>
-                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
+                    <a href="https://t.me/ZullTazar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
                       <Send size={20} className="text-cyan-400" />
                       <span className="text-gray-300 text-sm group-hover:text-white transition-colors">Telegram</span>
                     </a>
-                    <a href="mailto:" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
+                    <a href="sulfurazorx@gmail.com" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
                       <Mail size={20} className="text-cyan-400" />
                       <span className="text-gray-300 text-sm group-hover:text-white transition-colors">Email</span>
                     </a>
