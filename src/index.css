@@ -17,31 +17,10 @@
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-@keyframes shootingStar {
-  0% {
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-300px) translateY(300px);
-    opacity: 0;
-  }
-}
-
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar - Cosmic Style */
 ::-webkit-scrollbar {
   width: 14px;
 }
@@ -67,8 +46,18 @@ html {
     inset 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #8b5cf6 #000000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

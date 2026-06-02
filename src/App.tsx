@@ -6,7 +6,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('down');
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
   const [isTeamVisible, setIsTeamVisible] = useState(false);
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   const [isProjectsVisible, setIsProjectsVisible] = useState(false);
@@ -20,8 +20,8 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setScrollDirection(currentScrollY > lastScrollY ? 'down' : 'up');
-      setLastScrollY(currentScrollY);
+      setScrollDirection(currentScrollY > lastScrollY.current ? 'down' : 'up');
+      lastScrollY.current = currentScrollY;
 
       const sections = ['home', 'team', 'projects', 'services', 'tech', 'contact'];
       const current = sections.find(section => {
@@ -37,7 +37,7 @@ function App() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -320,13 +320,13 @@ function App() {
                     <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-xs sm:text-sm text-cyan-300">Expo</span>
                   </div>
                   <div className="flex gap-3">
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
+                    <a href="https://github.com/ZTDan1" target="_blank" rel="noopener noreferrer" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
                       <Github size={20} />
                     </a>
-                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
+                    <a href="https://t.me/ZullTazar" target="_blank" rel="noopener noreferrer" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
                       <Send size={20} />
                     </a>
-                    <a href="mailto:" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
+                    <a href="mailto:sulfurazorx@gmail.com" className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 hover:text-cyan-300 transition-all">
                       <Mail size={20} />
                     </a>
                   </div>
@@ -366,7 +366,7 @@ function App() {
               {/* Project 1 - E-commerce */}
               <div className={`group relative transition-all duration-700 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 h-full">
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:-translate-y-1 h-full">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Интернет-магазин электроники</h3>
                     <ExternalLink size={20} className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -391,7 +391,7 @@ function App() {
               {/* Project 2 - SaaS Platform */}
               <div className={`group relative transition-all duration-700 delay-150 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 to-violet-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-violet-500/30 hover:border-violet-400 transition-all duration-300 h-full">
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-violet-500/30 hover:border-violet-400 transition-all duration-300 hover:-translate-y-1 h-full">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">CRM система для автосервиса</h3>
                     <ExternalLink size={20} className="text-violet-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -416,7 +416,7 @@ function App() {
               {/* Project 3 - Landing */}
               <div className={`group relative transition-all duration-700 delay-300 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/0 to-fuchsia-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-fuchsia-500/30 hover:border-fuchsia-400 transition-all duration-300 h-full">
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-fuchsia-500/30 hover:border-fuchsia-400 transition-all duration-300 hover:-translate-y-1 h-full">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-fuchsia-400 to-pink-400 bg-clip-text text-transparent">Лендинг для IT-продукта</h3>
                     <ExternalLink size={20} className="text-fuchsia-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -440,7 +440,7 @@ function App() {
               {/* Project 4 - API */}
               <div className={`group relative transition-all duration-700 delay-450 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-violet-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 h-full">
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:-translate-y-1 h-full">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">API для мобильного приложения</h3>
                     <ExternalLink size={20} className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -465,7 +465,7 @@ function App() {
               {/* Project 5 - Fitness App (Данил) */}
               <div className={`group relative transition-all duration-700 delay-600 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 h-full">
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-1 h-full">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Фитнес-трекер</h3>
                     <ExternalLink size={20} className="text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -490,7 +490,7 @@ function App() {
               {/* Project 6 - Delivery App (Данил) */}
               <div className={`group relative transition-all duration-700 delay-700 ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/30 hover:border-blue-400 transition-all duration-300 h-full">
+                <div className="relative bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8 rounded-2xl border border-blue-500/30 hover:border-blue-400 transition-all duration-300 hover:-translate-y-1 h-full">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Приложение доставки еды</h3>
                     <ExternalLink size={20} className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -857,15 +857,15 @@ function App() {
                   <div className="space-y-3">
                     <a href="https://github.com/ZTDan1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
                       <Github size={20} className="text-cyan-400" />
-                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">GitHub</span>
+                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">@ZTDan1</span>
                     </a>
                     <a href="https://t.me/ZullTazar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
                       <Send size={20} className="text-cyan-400" />
-                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">Telegram</span>
+                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">@ZullTazar</span>
                     </a>
-                    <a href="sulfurazorx@gmail.com" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
+                    <a href="mailto:sulfurazorx@gmail.com" className="flex items-center gap-3 p-3 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-all group">
                       <Mail size={20} className="text-cyan-400" />
-                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">Email</span>
+                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors break-all">sulfurazorx@gmail.com</span>
                     </a>
                   </div>
                 </div>
